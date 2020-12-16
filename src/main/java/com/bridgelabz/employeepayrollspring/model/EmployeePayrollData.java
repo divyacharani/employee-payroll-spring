@@ -44,7 +44,11 @@ public @Data class EmployeePayrollData {
 	}
 
 	public EmployeePayrollData(int employeeId, EmployeePayrollDTO empDTO) {
+		this(empDTO);
 		this.employeeId = employeeId;
+	}
+	
+	public EmployeePayrollData(EmployeePayrollDTO empDTO) {
 		this.name = empDTO.name;
 		this.salary = empDTO.salary;
 		this.gender = empDTO.gender;
